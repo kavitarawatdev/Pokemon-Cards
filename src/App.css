@@ -1,0 +1,693 @@
+/* ============================= 
+similar styling
+==============================*/
+.header, .footer-section{
+  background: var(--gradient);
+}
+
+.pokemon-image, .f-social-media-icons a{
+  background-image: var(--gradient-helper-2);
+  animation: water-wave 3s linear infinite;
+}
+
+.navbar-link:link,
+.navbar-link:visited, .navbar-list .active, .f-links a:link,.f-links a:visited, .f-links .active{
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.navbar-link:hover, .f-links a:hover{
+  text-decoration-color: var(--yellow);
+  color: var(--yellow);
+  transition: 0.5s ;
+}
+
+.navbar-list .active, .f-links .active{
+  color: var(--yellow);
+}
+
+  /* ===============================================
+            HEADER SECTION
+  ==================================================*/
+  .header {
+    padding: 0 0.48rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width:100%;
+    z-index: 10000;
+    box-shadow: 0 0 1rem 1rem var(--shadow-helper);
+  }
+  
+  .header .logo {
+    height: 80%;
+    margin:auto 3rem;
+  }
+  
+  .navbar-list {
+    gap: 6rem;
+  }
+  
+  .navbar-link{
+    color: var(--text);
+  }
+
+  .navbar-link:link,
+  .navbar-link:visited, .navbar-list .active{
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-underline-offset: 1.5rem;
+
+}
+
+/* nav-bar-btns */
+.nav-btns{
+  font-size: 7rem;
+  color: var(--text);
+  background-color: transparent;
+  padding: 0.6rem;
+  border: 1px solid var(--text);
+  margin: 0.5rem 1rem;
+}
+
+.nav-btns:hover{
+  color: var(--shadow-helper);
+  border-color: var(--shadow-helper);
+}
+
+.nav-btns-container > .menu-btn{
+  display: none;
+}
+
+.nav-btns-container > .close-btn{
+  display: none;
+}
+
+
+  /* ===============================================
+        FOOTER SECTION
+==================================================*/
+.footer-section {
+  transition: all 0.7s linear;
+  align-items: center;
+}
+
+.footer-section .grid{
+  margin: 2% 5%;
+  gap:10%;
+  justify-content: center;
+  align-content: center;
+}
+
+.f-about p, .f-links a:visited, .f-links a, .f-address a, .f-address a:visited{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.f-about p, .f-links a,  .f-address a{
+  color: #BFBBA9;
+}
+
+.footer-section h3 {
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  text-align: justify;
+  text-transform: capitalize;
+  color: var(--text);
+}
+
+:is(.f-links, .f-address) > ul{
+  gap: 1.8rem;
+  justify-content: center;
+}
+
+.f-address span{
+  font-size: 2.5rem;
+  margin: 0 1.5rem 0 0;
+}
+
+.f-links li {
+  text-transform: capitalize;
+  list-style: "👉🏻";
+  list-style-position: outside;
+}
+
+.f-links  a {
+  margin: 0 2rem;
+}
+
+.footer-section > .flex{
+  gap: 4rem;
+  margin-top: 8rem;
+}
+
+.f-social-media-icons{
+    gap: 2rem;
+}
+
+.f-social-media-icons a{
+  text-align: center;
+  padding: 1.8rem;
+}
+
+.f-social-media-icons a > svg{
+  font-size: 4rem;
+  color: var(--tint);
+}
+
+.f-credits p {
+  text-align: center;
+  color:#FFF2AF;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+/* =============================================
+         pokemon cards section
+===============================================*/
+  .cards-section .grid{
+    gap: 15rem;
+  } 
+  
+  .cards-section .form{
+    margin: 5rem 0 20rem 0;
+    height: 10rem;
+    width: 80%;
+  }
+  
+  .cards-section .form > input{
+    height: 60%;
+    width: 50%;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .pokemon-card-container{
+    gap: 1rem;
+    height: 30rem;
+    padding: 0.5rem;
+    background-image: var(--shadow-gradient);
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius:1rem;
+  }
+  
+  .pokemon-card-container .btn{
+    bottom: 5%;
+    position: relative;
+  }
+  
+  .pokemon-card{
+    position: relative;
+    bottom: 8%;
+    transform: translateY(-1rem);
+    cursor: pointer;
+    padding: 1rem;
+    height: 32rem;
+    width: 25rem;
+    background:var(--gradient);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    border: 2px solid var(--tint);
+  }
+  
+  .pokemon-card .common-heading-2{
+    font-size: 2.5rem;
+  }
+  
+  .pokemon-image{
+    height: 17rem;
+    width: 100%;
+  }
+  
+  .pokemon-image img{
+    height: 100%;
+    z-index: 1000;
+  }
+
+
+  /* ===========================================
+  dynamic pokemon dwtailed page
+  ============================================= */
+  .pokemon-section{
+    background:var(--box-shadow);
+    gap: 4rem;
+  }
+  
+  .pokemon-section .grid{
+    gap:5rem;
+  }
+
+  .pokemon-section figure{
+    width: 100%;
+    background-image: var(--text-gradient);
+    animation: water-wave 3s linear infinite;
+    padding: 2rem;
+    margin: auto;
+  }
+  
+  .pokemon-section figure>img{
+    width: 100%;
+    display: inline-block;
+  }
+
+  .pokemon-details-container{
+    background: var(--gradient);
+    padding: 1rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .pokemon-info{
+    width:80%;
+    align-items: center;
+    margin: 0 10%;
+  }
+
+  .pokemon-details-container p {
+    font-size: 3.5rem;
+    background: var(--shadow-gradient);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: capitalize;
+    font-weight: 700;
+    width: fit-content;
+    letter-spacing: 0.3rem;
+  }
+
+  .pokemon-section .btn{
+    margin-top: 3rem;
+    padding: 3rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  
+  /* ===============================================
+           about SECTION
+  ==================================================*/
+  .about-section .grid-two-col{
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 10rem;
+  }
+  .about-project-container {
+    gap: 4rem;
+  }
+
+  .about-section figure {
+    width: 100%;
+  }
+  
+  .about-section figure > img {
+    max-width: 90%;
+    display: inline-block;
+    box-shadow: -2.5rem 2.5rem 0 1rem var(--shadow);
+  }
+
+  .about-section article {
+    padding: 2rem;
+    background: var(--gradient);
+    box-shadow: 0 0 1rem 1rem var(--shadow);
+  }
+
+ .about-section  p {
+    width: 100%;
+    font-weight: 500;
+    line-height: 4rem;
+    line-break: loose;
+    margin: 1rem;
+    font-size: 3rem;
+    color: var(--text);
+  }
+
+  .about-section strong, .about-section code{
+    color: var(--bg);
+    font-weight: 900;
+    font-size: 3.2rem;
+    text-decoration:solid;
+  }
+
+  .about-section .hidden{
+    display: none;
+  }
+  /* ===============================================
+          CONTACT SECTION
+==================================================*/
+
+.contact-section iframe{
+  width: 100%;
+  border: 0;
+  height: 50rem ;
+  margin: 5rem 0;
+}
+
+.section-contact-main {
+  min-width: 70rem;
+  margin: 9rem auto 0 auto;
+  transition: all 0.3s linear;
+}
+
+.section-contact-main .grid {
+  gap: 3.2rem;
+}
+
+.section-contact-main form {
+  gap: 3.2rem;
+  margin: 0 auto;
+}
+
+.section-contact-main input,
+.section-contact-main textarea {
+  padding: 1.5rem 2rem;
+  border: 0.1rem solid #c9c9c9;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.section-contact-main input[type="submit"] {
+  max-width: 30%;
+  border: none;
+}
+
+/* ===============================================
+        loading SECTION
+==================================================*/
+.loading-img > img{
+  display: inline-block;
+  height: 10rem;
+}
+
+/* ===============================================
+            empty SECTION
+==================================================*/
+.empty-container{
+  width: 30rem;
+  height:25rem;
+  align-items: center;
+}
+
+.empty-img img{
+  height: 10rem;
+  display: inline-block;
+}
+
+  /* ===============================================
+           error SECTION
+  ==================================================*/
+  .error-section{
+    height: 80vh;
+  }
+
+.error-section .container{
+  background:var(--gradient);
+  padding: 2rem;
+}
+
+.error-section .common-heading-2{
+  font-size: 4rem;
+}
+
+.error-section .container > .flex{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.error-section  p{
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--helper);
+}
+
+
+/* ===================================================== 
+MEDIA QUERIES
+=============================================================*/
+
+/* ==========for below 1700px========== */
+@media (max-width:107em) {
+  /* about-section */
+  .about-section .grid-two-col{
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .about-project-right-side{
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-project-right-side article{
+    width: 80%;
+  }
+  .about-section figure{
+    width: 100%;
+  }
+
+  .about-section figure>img{
+    max-width: 50%;
+  }
+
+  html{
+    font-size: 9px;
+  }
+
+  .container {
+    max-width: 140rem;
+  } 
+
+  /* pokemon cards */
+  .cards-section .grid-four-col{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========= for below 1200px =========== */
+@media (max-width: 75em) {
+  html {
+    font-size: 6.7px;
+  }
+
+  .grid {
+    gap: 4.8re;
+  }
+
+  .container {
+    max-width: 110rem;
+  }
+  /* cards section */
+  .cards-section .grid-four-col{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .cards-section .grid{
+    gap: 25rem;
+  }
+}
+
+/* =========== for below 1500px ========= */
+/* 1em = 16px; */
+/* 1500/16 = 95em */
+@media (max-width: 95em) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+  }
+
+  .navbar-list {
+    gap: 3.4rem;
+  }
+}
+
+/* ====== for below 980px ======  */
+@media (max-width: 980px) {
+  html {
+    font-size: 5px;
+  }
+
+  .header .nav-bar{
+    display: none;
+  }
+
+  .animated-header{
+    position: relative;
+  }
+
+  .animated-header .logo{
+    height: 10rem;
+  }
+
+  .animated-header .nav-bar{
+    position: absolute;
+    top:10rem;
+    left: 0;
+    background: var(--gradient);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    justify-content: center;
+    z-index: 10000;
+  }
+
+  .animated-header .nav-bar > .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8vh;
+  }
+
+  .animated-header .navbar-link{
+    font-size: 6rem;
+  }
+
+  .animated-header .active{
+    color: var(--text);
+  }
+  .animated-header .navbar-link:active .animated-header{
+    display: none;
+  }
+
+  .nav-btns-container > .menu-btn,.nav-btns-container > .flex {
+    display: flex;
+  }
+ 
+  .nav-btns-container > .hidden, .animated-header .hidden{
+    display: none;
+  }
+
+  /* pokemon cards */
+  .cards-section .grid-four-col{
+    grid-template-columns: 1fr;
+  }
+
+  .cards-section .form{
+    max-width: 90vw;
+  }
+
+  .cards-section .form>input{
+    width: 60%;
+  }
+  .cards-section .grid{
+    gap: 20rem;
+  }
+  .pokemon-details-container p{
+    font-size: 2.5rem;
+  }
+
+}
+
+/*==== for below 790px =============*/
+@media (max-width: 49em) {
+  .container {
+    max-width: 75rem;
+  }
+
+  /* cards sectin */
+  .cards-section > .grid-three-col{
+    grid-template-columns: 1fr;
+  }
+  /*  about section*/
+
+  .about-section .container{
+     max-width: 90%;
+  }
+
+  .about-section figure{
+    width: 65%;
+  }
+
+  .about-section article{
+    width: 90%;
+  }
+  /* footer section */
+  .footer-section .grid-three-col{
+    grid-template-columns: 1fr;
+  }
+  .pokemon-section .grid-two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-section .container{
+    width: 95vw;
+  }
+  .pokemon-section figure{
+    width: 80%;
+  }
+  .pokemon-details-container{
+    width: 100%;
+  }
+}
+
+/* below 560px */
+@media (max-width:35em) {
+  .container{
+    max-width: 48rem;
+  }
+
+  .btn{
+      padding: 1rem 2rem;
+  }
+
+  
+  /* CARDS-SECTION */
+  .cards-section .grid-three-col{
+    grid-template-columns:  1fr;
+  }
+  
+  /* header */
+  .header{
+    padding: 0 3.2rem;
+  }
+
+  .animated-header .navbar-link{
+    font-size: 4rem;
+  }
+
+  /* contact-section */
+  .section-contact-main .grid-two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section .container{
+    padding: 0 3rem;
+  }
+
+  .section-contact-main input[type="submit"]{
+    max-width: 40%;
+  }
+
+  /* footer */
+  :is(.footer-section) :is(.f-about, .f-address){
+    grid-column: 1/-1;
+  }
+
+}
+
+/* for below 560px */
+@media (max-width:450px){
+  .cards-section .form>input{
+    width:100%;
+  }
+}
+
+/* for below 221px */
+@media (max-width:221px) {
+  .animated-header .navbar-link{
+    font-size: 2rem;
+  }
+}

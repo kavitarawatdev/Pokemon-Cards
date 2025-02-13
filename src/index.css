@@ -1,0 +1,458 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* dark theme  */
+:root {
+  --bg: #212529;
+  --helper: #fff1e6;
+  --tint: #773afa;
+  --helper-tint: #f3f4ff;
+  --shadow: #a0a0f7;
+  --text: #edf6f9;
+  --shadow-helper:#493D9E;
+  --yellow: #EF9B0F;
+
+  /* gradient */
+  --gradient-helper-3: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%); 
+  --heading: linear-gradient(to right, #f4e784, #f5895c, #e98fc0);
+  --gradient: linear-gradient(to right, #6274e7, #8752a3);
+  --gradient-helper-2: linear-gradient(to right, #adfda2, #11d3f3);
+  --text-gradient: linear-gradient(to right, #caefd7, #f5bfd7, #abc9e9);
+  --shadow-support: 0 2rem 2rem 0 rgb(132 144 255 / 30%);
+  --box-shadow: 0 0 2rem 0.8rem var(--shadow);
+  --shadow-gradient: linear-gradient(to right, #ebf4f5, #b5c6e0);
+}
+
+html {
+    font-size: 10px;
+    /* 1rem=10px */
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: hidden;
+    background: var(--bg);
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+ 
+  #root{
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,h2,h3, h4 {
+    font-family: sans-serif;
+  }
+  
+
+  input , textarea{
+    outline: none;
+    border: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+
+      /* ===============================================
+          REUSABLE CODE
+  ==================================================*/
+  .section {
+    padding: 9rem 0;
+    margin-top: 10rem;
+  }
+  
+  .flex{
+    display: flex;
+  }
+
+  .flex-centered{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-col{
+    flex-direction: column;
+  }
+  .grid {
+    display: grid;
+    gap: 9rem;
+  }
+  
+  .grid-two-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-three-col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-four-col {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .container {
+    max-width: 162rem;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    background: var(--gradient-helper-3);
+    padding: 1.6rem 3.2rem;
+    border: none;
+    color: var(--helper-tint);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    box-shadow: var(--shadow-support);
+    transform: translateY(-1rem);
+  }
+
+.common-heading {
+    font-size: 6rem;
+    font-weight: 600;
+    margin: 0 auto 6rem auto;
+    width: fit-content;
+    text-transform: capitalize;
+    position: relative;
+    background-image: var(--heading);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.common-heading-2{
+    font-weight: 600;
+    width: fit-content;
+    text-transform: capitalize;
+    position: relative;
+    background-image: var(--text-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.highlighted-para{
+  background-image:var(--text-gradient);
+  color: var(--tint);
+  width: fit-content;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border-radius: 1rem;
+}
+  
+.common-heading::before {
+    content: "";
+    position: absolute;
+    top: 105%;
+    left: 0;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: var(--heading);
+}
+  
+.common-heading::after {
+    content: "";
+    position: absolute;
+    top: 115%;
+    left: 1.5rem;
+    width: 70%;
+    height: 0.3rem;
+    background-image: var(--heading);
+}
+
+@keyframes water-wave {
+  0%{
+    border-radius: 30% 70% 34% 66% / 59% 37% 63% 41%;
+  }
+  30%{
+    border-radius: 42% 58% 64% 36% / 55% 55% 45% 45% ;
+  }
+  60%{
+    border-radius: 53% 47% 68% 32% / 40% 45% 55% 60% ;
+  }100%{
+    border-radius: 30% 70% 34% 66% / 59% 37% 63% 41%;
+  }
+}
+
+
+/* ===================================================== 
+MEDIA QUERIES
+=============================================================*/
+
+/* ==========for below 1700px========== */
+@media (max-width:107em) {
+  /* about-section */
+  .about-section .grid-two-col{
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .about-project-right-side{
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-project-right-side article{
+    width: 80%;
+  }
+  .about-section figure{
+    width: 100%;
+  }
+
+  .about-section figure>img{
+    max-width: 50%;
+  }
+
+  html{
+    font-size: 9px;
+  }
+
+  .container {
+    max-width: 140rem;
+  } 
+
+  /* pokemon cards */
+  .cards-section .grid-four-col{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========= for below 1200px =========== */
+@media (max-width: 75em) {
+  html {
+    font-size: 6.7px;
+  }
+
+  .grid {
+    gap: 4.8re;
+  }
+
+  .container {
+    max-width: 110rem;
+  }
+  /* cards section */
+  .cards-section .grid-four-col{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .cards-section .grid{
+    gap: 25rem;
+  }
+}
+
+/* =========== for below 1500px ========= */
+/* 1em = 16px; */
+/* 1500/16 = 95em */
+@media (max-width: 95em) {
+  .container {
+    max-width: 130rem;
+    padding: 0 3.2rem;
+  }
+
+  .navbar-list {
+    gap: 3.4rem;
+  }
+}
+
+/* ====== for below 980px ======  */
+@media (max-width: 980px) {
+  html {
+    font-size: 5px;
+  }
+
+  .header .nav-bar{
+    display: none;
+  }
+
+  .animated-header{
+    position: relative;
+  }
+
+  .animated-header .logo{
+    height: 10rem;
+  }
+
+  .animated-header .nav-bar{
+    position: absolute;
+    top:10rem;
+    left: 0;
+    background: var(--gradient);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    justify-content: center;
+    z-index: 10000;
+  }
+
+  .animated-header .nav-bar > .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8vh;
+  }
+
+  .animated-header .navbar-link{
+    font-size: 6rem;
+  }
+
+  .animated-header .active{
+    color: var(--text);
+  }
+  .animated-header .navbar-link:active .animated-header{
+    display: none;
+  }
+
+  .nav-btns-container > .menu-btn,.nav-btns-container > .flex {
+    display: flex;
+  }
+ 
+  .nav-btns-container > .hidden, .animated-header .hidden{
+    display: none;
+  }
+
+  /* pokemon cards */
+  .cards-section .grid-four-col{
+    grid-template-columns: 1fr;
+  }
+
+  .cards-section .form{
+    max-width: 90vw;
+  }
+
+  .cards-section .form>input{
+    width: 60%;
+  }
+  .cards-section .grid{
+    gap: 20rem;
+  }
+  .pokemon-details-container p{
+    font-size: 2.5rem;
+  }
+
+}
+
+/*==== for below 790px =============*/
+@media (max-width: 49em) {
+  .container {
+    max-width: 75rem;
+  }
+
+  /* cards sectin */
+  .cards-section > .grid-three-col{
+    grid-template-columns: 1fr;
+  }
+  /*  about section*/
+
+  .about-section .container{
+     max-width: 90%;
+  }
+
+  .about-section figure{
+    width: 65%;
+  }
+
+  .about-section article{
+    width: 90%;
+  }
+  /* footer section */
+  .footer-section .grid-three-col{
+    grid-template-columns: 1fr;
+  }
+  .pokemon-section .grid-two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-section .container{
+    width: 95vw;
+  }
+  .pokemon-section figure{
+    width: 80%;
+  }
+  .pokemon-details-container{
+    width: 100%;
+  }
+}
+
+/* below 560px */
+@media (max-width:35em) {
+  .container{
+    max-width: 48rem;
+  }
+
+  .btn{
+      padding: 1rem 2rem;
+  }
+
+  
+  /* CARDS-SECTION */
+  .cards-section .grid-three-col{
+    grid-template-columns:  1fr;
+  }
+  
+  /* header */
+  .header{
+    padding: 0 3.2rem;
+  }
+
+  .animated-header .navbar-link{
+    font-size: 4rem;
+  }
+
+  /* contact-section */
+  .section-contact-main .grid-two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section .container{
+    padding: 0 3rem;
+  }
+
+  .section-contact-main input[type="submit"]{
+    max-width: 40%;
+  }
+
+  /* footer */
+  :is(.footer-section) :is(.f-about, .f-address){
+    grid-column: 1/-1;
+  }
+
+}
+
+/* for below 560px */
+@media (max-width:450px){
+  .cards-section .form>input{
+    width:100%;
+  }
+}
+
+/* for below 221px */
+@media (max-width:221px) {
+  .animated-header .navbar-link{
+    font-size: 2rem;
+  }
+}
